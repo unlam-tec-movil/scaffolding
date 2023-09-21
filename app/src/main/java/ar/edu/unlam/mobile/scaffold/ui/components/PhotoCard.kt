@@ -37,7 +37,7 @@ fun PhotoCard(text: String, title: String, imageUrl: String, action: () -> Unit,
                     Modifier
                         .background(color = Color.LightGray)
                         .fillMaxWidth()
-                        .height(194.dp),
+                        .height(300.dp),
                 )
             }
             Row(

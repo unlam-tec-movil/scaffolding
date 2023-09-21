@@ -8,6 +8,7 @@ import javax.inject.Inject
 
 class KittyDefaultRepository @Inject constructor(val networkRepository: KittyNetworkRepository) : KittyRepository {
     override suspend fun getKitty(): Flow<Kitty> {
-        return this.networkRepository.getRandomKitty().map { it.toKitty() }
+        val randomKittyFLow = networkRepository.getRandomKitty()
+        return randomKittyFLow.map { it.toKitty() }
     }
 }
